@@ -24,6 +24,16 @@ if (!project) {
       <img src="${img.src}" alt="${img.caption || project.title}">
       ${img.caption ? `<figcaption>${img.caption}</figcaption>` : ""}
     `;
+
+    // Portrait photos are restricted to the viewport height instead of
+    // stretching full-width, so they don't appear stretched/oversized.
+    const imgEl = fig.querySelector("img");
+    imgEl.addEventListener("load", () => {
+      if (imgEl.naturalHeight > imgEl.naturalWidth) {
+        fig.classList.add("portrait");
+      }
+    });
+
     gallery.appendChild(fig);
   });
 
