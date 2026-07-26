@@ -333,5 +333,33 @@ const PROJECTS = [
       { src: "images/thecatlins/30.jpg", caption: "Caption for photo 30", landscape: true },
       { src: "images/thecatlins/31.jpg", caption: "Caption for photo 31", landscape: true }
     ]
+  },
+  {
+    slug: "foxriver",
+    title: "Fox River",
+    intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
+    thumb: "images/foxriver/thumb.jpg",
+    thumbGrid: "images/foxriver/thumb-grid.jpg",
+    thumbRatio: 1.4925,
+    images: [
+      { src: "images/foxriver/01.jpg", caption: "Caption for photo 1", landscape: true },
+      { src: "images/foxriver/02.jpg", caption: "Caption for photo 2", landscape: true },
+      { src: "images/foxriver/03.jpg", caption: "Caption for photo 3", landscape: true },
+      { src: "images/foxriver/04.jpg", caption: "Caption for photo 4", landscape: true },
+      { src: "images/foxriver/05.jpg", caption: "Caption for photo 5", landscape: true },
+      { src: "images/foxriver/06.jpg", caption: "Caption for photo 6", landscape: true },
+      { src: "images/foxriver/07.jpg", caption: "Caption for photo 7", landscape: true },
+      { src: "images/foxriver/08.jpg", caption: "Caption for photo 8", landscape: true },
+      { src: "images/foxriver/09.jpg", caption: "Caption for photo 9", landscape: true },
+      { src: "images/foxriver/10.jpg", caption: "Caption for photo 10", landscape: true },
+      { src: "images/foxriver/11.jpg", caption: "Caption for photo 11", landscape: true },
+      { src: "images/foxriver/12.jpg", caption: "Caption for photo 12", landscape: true },
+      { src: "images/foxriver/13.jpg", caption: "Caption for photo 13", landscape: false },
+      { src: "images/foxriver/14.jpg", caption: "Caption for photo 14", landscape: true },
+      { src: "images/foxriver/15.jpg", caption: "Caption for photo 15", landscape: true },
+      { src: "images/foxriver/16.jpg", caption: "Caption for photo 16", landscape: true },
+      { src: "images/foxriver/17.jpg", caption: "Caption for photo 17", landscape: true },
+      { src: "images/foxriver/18.jpg", caption: "Caption for photo 18", landscape: true }
+    ]
   }
 ];
