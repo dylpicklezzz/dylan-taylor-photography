@@ -5,12 +5,17 @@
 // 2. Put a 4:3 thumbnail image in it named thumb.jpg
 // 3. Put your full-size photos in it named 01.jpg, 02.jpg, 03.jpg...
 // 4. Copy one of the blocks below, paste it into the PROJECTS array,
-//    change the text and image list to match. "landscape" records whether
-//    a photo is wider than tall, and "thumbRatio" is the thumbnail's
-//    width divided by its height - both are computed once so the page
-//    doesn't have to download images just to check their shape. If you
-//    add a photo/project and aren't sure of the exact number, a rough
-//    guess is fine (landscape: true, thumbRatio: 1.5 for a typical photo).
+//    change the text and image list to match.
+//    - "landscape" records whether a photo is wider than tall
+//    - "thumbRatio" is the thumbnail's width divided by its height
+//    - "thumb" is the full-quality thumbnail (used on the project page
+//      as the lead image); "thumbGrid" is a smaller compressed copy of
+//      the SAME photo used only on the homepage grid, so the grid loads
+//      fast without permanently degrading the only copy of the photo.
+//    All of the above are computed once from the files on disk, so the
+//    page never has to download images just to check their shape. If
+//    you add a photo/project and aren't sure of the exact numbers, a
+//    rough guess is fine (landscape: true, thumbRatio: 1.5).
 // 5. Save this file, refresh the browser. Done — no other file needs editing.
 //
 // The order of this array is the homepage order AND the order used by
@@ -23,7 +28,8 @@ const PROJECTS = [
     title: "Dolomites",
     intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
     thumb: "images/dolomites/thumb.jpg",
-    thumbRatio: 1.5015,
+    thumbGrid: "images/dolomites/thumb-grid.jpg",
+    thumbRatio: 1.5004,
     images: [
       { src: "images/dolomites/01.jpg", caption: "Caption for photo 1", landscape: true },
       { src: "images/dolomites/02.jpg", caption: "Caption for photo 2", landscape: true },
@@ -55,7 +61,8 @@ const PROJECTS = [
     title: "Menorca",
     intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
     thumb: "images/menorca/thumb.jpg",
-    thumbRatio: 1.5015,
+    thumbGrid: "images/menorca/thumb-grid.jpg",
+    thumbRatio: 1.5004,
     images: [
       { src: "images/menorca/01.jpg", caption: "Caption for photo 1", landscape: true },
       { src: "images/menorca/02.jpg", caption: "Caption for photo 2", landscape: true },
@@ -109,7 +116,8 @@ const PROJECTS = [
     title: "Slovenia",
     intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
     thumb: "images/slovenia/thumb.jpg",
-    thumbRatio: 1.5015,
+    thumbGrid: "images/slovenia/thumb-grid.jpg",
+    thumbRatio: 1.5004,
     images: [
       { src: "images/slovenia/01.jpg", caption: "Caption for photo 1", landscape: true },
       { src: "images/slovenia/02.jpg", caption: "Caption for photo 2", landscape: true },
@@ -131,6 +139,7 @@ const PROJECTS = [
     title: "Fam",
     intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
     thumb: "images/fam/thumb.jpg",
+    thumbGrid: "images/fam/thumb-grid.jpg",
     thumbRatio: 1.4925,
     images: [
       { src: "images/fam/01.jpg", caption: "Caption for photo 1", landscape: true },
@@ -148,7 +157,8 @@ const PROJECTS = [
     title: "Per Molts d'anys, Allie!",
     intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
     thumb: "images/allie/thumb.jpg",
-    thumbRatio: 1.5015,
+    thumbGrid: "images/allie/thumb-grid.jpg",
+    thumbRatio: 1.5004,
     images: [
       { src: "images/allie/01.jpg", caption: "Caption for photo 1", landscape: true },
       { src: "images/allie/02.jpg", caption: "Caption for photo 2", landscape: true },
@@ -183,7 +193,8 @@ const PROJECTS = [
     title: "Basilica Cistern",
     intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
     thumb: "images/basilicacistern/thumb.jpg",
-    thumbRatio: 1.5015,
+    thumbGrid: "images/basilicacistern/thumb-grid.jpg",
+    thumbRatio: 1.5004,
     images: [
       { src: "images/basilicacistern/01.jpg", caption: "Caption for photo 1", landscape: true },
       { src: "images/basilicacistern/02.jpg", caption: "Caption for photo 2", landscape: false },
@@ -199,7 +210,8 @@ const PROJECTS = [
     title: "Cheesemongers",
     intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
     thumb: "images/cheesemongers/thumb.jpg",
-    thumbRatio: 1.5015,
+    thumbGrid: "images/cheesemongers/thumb-grid.jpg",
+    thumbRatio: 1.5004,
     images: [
       { src: "images/cheesemongers/01.jpg", caption: "Caption for photo 1", landscape: true },
       { src: "images/cheesemongers/02.jpg", caption: "Caption for photo 2", landscape: true },
@@ -220,6 +232,7 @@ const PROJECTS = [
     title: "Lonnie",
     intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
     thumb: "images/lonnie/thumb.jpg",
+    thumbGrid: "images/lonnie/thumb-grid.jpg",
     thumbRatio: 1.4925,
     images: [
       { src: "images/lonnie/01.jpg", caption: "Caption for photo 1", landscape: true },
@@ -250,6 +263,7 @@ const PROJECTS = [
     title: "Dark Mofo",
     intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
     thumb: "images/darkmofo/thumb.jpg",
+    thumbGrid: "images/darkmofo/thumb-grid.jpg",
     thumbRatio: 1.4993,
     images: [
       { src: "images/darkmofo/01.jpg", caption: "Caption for photo 1", landscape: true },

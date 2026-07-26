@@ -13,7 +13,7 @@ PROJECTS.forEach((project) => {
 
   link.innerHTML = `
     <div class="thumb-frame skeleton" style="aspect-ratio: ${ratio};">
-      <img src="${project.thumb}" alt="${project.title}">
+      <img src="${project.thumbGrid || project.thumb}" alt="${project.title}">
     </div>
     <div class="thumb-caption">
       <span class="thumb-title">${project.title}</span>
