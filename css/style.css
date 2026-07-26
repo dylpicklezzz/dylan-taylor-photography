@@ -72,15 +72,46 @@ nav {
   padding: 2.25rem 2rem 1.5rem;
 }
 
+/* Nav text outline: -webkit-text-stroke always centers on the letterform
+   (half in, half out), which chokes thin serif strokes. To get an
+   outside-only outline, an identical copy of the text is stroked and
+   placed directly behind the real (solid-fill) text via ::after - the
+   fill covers the inward half of the stroke, leaving only the outward
+   half visible. NOTE: the ::after content is hardcoded to match the
+   visible text below - if you ever change "Dylan Taylor" or "About",
+   update the matching content string here too. */
+
 .nav-name {
+  position: relative;
   font-family: 'Gloock', serif;
   font-size: 36px;
 }
 
+.nav-name::after {
+  content: "Dylan Taylor";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  color: transparent;
+  -webkit-text-stroke: 0.5px #333;
+}
+
 .nav-link {
+  position: relative;
   font-family: 'Gloock', serif;
   font-size: 36px;
   color: var(--grey);
+}
+
+.nav-link::after {
+  content: "About";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  color: transparent;
+  -webkit-text-stroke: 0.5px #333;
 }
 
 .nav-link:hover {
@@ -197,6 +228,11 @@ nav {
 
   nav {
     padding: 1.25rem 1.25rem;
+  }
+
+  .nav-name,
+  .nav-link {
+    font-size: 18px;
   }
 }
 
