@@ -307,9 +307,6 @@ const PROJECTS = [
     thumbGrid: "images/thecatlins/thumb-grid.jpg",
     thumbRatio: 1.5004,
     images: [
-      { src: "images/thecatlins/01.jpg", caption: "Caption for photo 1", landscape: true },
-      { src: "images/thecatlins/02.jpg", caption: "Caption for photo 2", landscape: true },
-      { src: "images/thecatlins/03.jpg", caption: "Caption for photo 3", landscape: true },
       { src: "images/thecatlins/04.jpg", caption: "Caption for photo 4", landscape: true },
       { src: "images/thecatlins/05.jpg", caption: "Caption for photo 5", landscape: false },
       { src: "images/thecatlins/06.jpg", caption: "Caption for photo 6", landscape: true },
@@ -318,7 +315,6 @@ const PROJECTS = [
       { src: "images/thecatlins/09.jpg", caption: "Caption for photo 9", landscape: true },
       { src: "images/thecatlins/10.jpg", caption: "Caption for photo 10", landscape: true },
       { src: "images/thecatlins/11.jpg", caption: "Caption for photo 11", landscape: true },
-      { src: "images/thecatlins/12.jpg", caption: "Caption for photo 12", landscape: true },
       { src: "images/thecatlins/13.jpg", caption: "Caption for photo 13", landscape: true },
       { src: "images/thecatlins/14.jpg", caption: "Caption for photo 14", landscape: false },
       { src: "images/thecatlins/15.jpg", caption: "Caption for photo 15", landscape: true },
@@ -334,8 +330,6 @@ const PROJECTS = [
       { src: "images/thecatlins/25.jpg", caption: "Caption for photo 25", landscape: true },
       { src: "images/thecatlins/26.jpg", caption: "Caption for photo 26", landscape: true },
       { src: "images/thecatlins/27.jpg", caption: "Caption for photo 27", landscape: true },
-      { src: "images/thecatlins/28.jpg", caption: "Caption for photo 28", landscape: true },
-      { src: "images/thecatlins/29.jpg", caption: "Caption for photo 29", landscape: true },
       { src: "images/thecatlins/30.jpg", caption: "Caption for photo 30", landscape: true },
       { src: "images/thecatlins/31.jpg", caption: "Caption for photo 31", landscape: true }
     ]
