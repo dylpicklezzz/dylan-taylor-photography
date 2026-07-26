@@ -6,9 +6,11 @@
 // 3. Put your full-size photos in it named 01.jpg, 02.jpg, 03.jpg...
 // 4. Copy one of the blocks below, paste it into the PROJECTS array,
 //    change the text and image list to match. "landscape" records whether
-//    the photo is wider than it is tall (computed once, so pages don't have
-//    to download every image just to check orientation) - if you add a
-//    photo, just set it to true (landscape) or false (portrait).
+//    a photo is wider than tall, and "thumbRatio" is the thumbnail's
+//    width divided by its height - both are computed once so the page
+//    doesn't have to download images just to check their shape. If you
+//    add a photo/project and aren't sure of the exact number, a rough
+//    guess is fine (landscape: true, thumbRatio: 1.5 for a typical photo).
 // 5. Save this file, refresh the browser. Done — no other file needs editing.
 //
 // The order of this array is the homepage order AND the order used by
@@ -21,6 +23,7 @@ const PROJECTS = [
     title: "Dolomites",
     intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
     thumb: "images/dolomites/thumb.jpg",
+    thumbRatio: 1.5015,
     images: [
       { src: "images/dolomites/01.jpg", caption: "Caption for photo 1", landscape: true },
       { src: "images/dolomites/02.jpg", caption: "Caption for photo 2", landscape: true },
@@ -52,6 +55,7 @@ const PROJECTS = [
     title: "Menorca",
     intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
     thumb: "images/menorca/thumb.jpg",
+    thumbRatio: 1.5015,
     images: [
       { src: "images/menorca/01.jpg", caption: "Caption for photo 1", landscape: true },
       { src: "images/menorca/02.jpg", caption: "Caption for photo 2", landscape: true },
@@ -105,6 +109,7 @@ const PROJECTS = [
     title: "Slovenia",
     intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
     thumb: "images/slovenia/thumb.jpg",
+    thumbRatio: 1.5015,
     images: [
       { src: "images/slovenia/01.jpg", caption: "Caption for photo 1", landscape: true },
       { src: "images/slovenia/02.jpg", caption: "Caption for photo 2", landscape: true },
@@ -126,6 +131,7 @@ const PROJECTS = [
     title: "Fam",
     intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
     thumb: "images/fam/thumb.jpg",
+    thumbRatio: 1.4925,
     images: [
       { src: "images/fam/01.jpg", caption: "Caption for photo 1", landscape: true },
       { src: "images/fam/02.jpg", caption: "Caption for photo 2", landscape: true },
@@ -142,6 +148,7 @@ const PROJECTS = [
     title: "Per Molts d'anys, Allie!",
     intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
     thumb: "images/allie/thumb.jpg",
+    thumbRatio: 1.5015,
     images: [
       { src: "images/allie/01.jpg", caption: "Caption for photo 1", landscape: true },
       { src: "images/allie/02.jpg", caption: "Caption for photo 2", landscape: true },
@@ -176,6 +183,7 @@ const PROJECTS = [
     title: "Basilica Cistern",
     intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
     thumb: "images/basilicacistern/thumb.jpg",
+    thumbRatio: 1.5015,
     images: [
       { src: "images/basilicacistern/01.jpg", caption: "Caption for photo 1", landscape: true },
       { src: "images/basilicacistern/02.jpg", caption: "Caption for photo 2", landscape: false },
@@ -191,6 +199,7 @@ const PROJECTS = [
     title: "Cheesemongers",
     intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
     thumb: "images/cheesemongers/thumb.jpg",
+    thumbRatio: 1.5015,
     images: [
       { src: "images/cheesemongers/01.jpg", caption: "Caption for photo 1", landscape: true },
       { src: "images/cheesemongers/02.jpg", caption: "Caption for photo 2", landscape: true },
@@ -204,6 +213,36 @@ const PROJECTS = [
       { src: "images/cheesemongers/11.jpg", caption: "Caption for photo 11", landscape: false },
       { src: "images/cheesemongers/12.jpg", caption: "Caption for photo 12", landscape: true },
       { src: "images/cheesemongers/13.jpg", caption: "Caption for photo 13", landscape: true }
+    ]
+  },
+  {
+    slug: "lonnie",
+    title: "Lonnie",
+    intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
+    thumb: "images/lonnie/thumb.jpg",
+    thumbRatio: 1.4925,
+    images: [
+      { src: "images/lonnie/01.jpg", caption: "Caption for photo 1", landscape: true },
+      { src: "images/lonnie/02.jpg", caption: "Caption for photo 2", landscape: true },
+      { src: "images/lonnie/03.jpg", caption: "Caption for photo 3", landscape: true },
+      { src: "images/lonnie/04.jpg", caption: "Caption for photo 4", landscape: true },
+      { src: "images/lonnie/05.jpg", caption: "Caption for photo 5", landscape: true },
+      { src: "images/lonnie/06.jpg", caption: "Caption for photo 6", landscape: true },
+      { src: "images/lonnie/07.jpg", caption: "Caption for photo 7", landscape: true },
+      { src: "images/lonnie/08.jpg", caption: "Caption for photo 8", landscape: true },
+      { src: "images/lonnie/09.jpg", caption: "Caption for photo 9", landscape: true },
+      { src: "images/lonnie/10.jpg", caption: "Caption for photo 10", landscape: true },
+      { src: "images/lonnie/11.jpg", caption: "Caption for photo 11", landscape: true },
+      { src: "images/lonnie/12.jpg", caption: "Caption for photo 12", landscape: true },
+      { src: "images/lonnie/13.jpg", caption: "Caption for photo 13", landscape: true },
+      { src: "images/lonnie/14.jpg", caption: "Caption for photo 14", landscape: true },
+      { src: "images/lonnie/15.jpg", caption: "Caption for photo 15", landscape: true },
+      { src: "images/lonnie/16.jpg", caption: "Caption for photo 16", landscape: true },
+      { src: "images/lonnie/17.jpg", caption: "Caption for photo 17", landscape: true },
+      { src: "images/lonnie/18.jpg", caption: "Caption for photo 18", landscape: true },
+      { src: "images/lonnie/19.jpg", caption: "Caption for photo 19", landscape: true },
+      { src: "images/lonnie/20.jpg", caption: "Caption for photo 20", landscape: true },
+      { src: "images/lonnie/21.jpg", caption: "Caption for photo 21", landscape: true }
     ]
   }
 ];

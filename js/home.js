@@ -9,8 +9,10 @@ PROJECTS.forEach((project) => {
   link.className = "thumb-card";
   link.href = `project.html?slug=${encodeURIComponent(project.slug)}`;
 
+  const ratio = project.thumbRatio || 1.5;
+
   link.innerHTML = `
-    <div class="thumb-frame">
+    <div class="thumb-frame skeleton" style="aspect-ratio: ${ratio};">
       <img src="${project.thumb}" alt="${project.title}">
     </div>
     <div class="thumb-caption">
@@ -18,6 +20,13 @@ PROJECTS.forEach((project) => {
       <span class="thumb-count">1 of ${count}</span>
     </div>
   `;
+
+  const frame = link.querySelector(".thumb-frame");
+  const thumbImg = link.querySelector("img");
+  thumbImg.addEventListener("load", () => {
+    frame.classList.remove("skeleton");
+    thumbImg.classList.add("loaded");
+  });
 
   grid.appendChild(link);
 });

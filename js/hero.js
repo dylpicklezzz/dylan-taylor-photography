@@ -24,6 +24,7 @@ function shuffle(arr) {
 }
 
 const slidesEl = document.getElementById("hero-slides");
+const heroEl = document.getElementById("hero");
 
 if (slidesEl && heroPool.length > 0) {
   let sequence = shuffle(heroPool);
@@ -31,14 +32,29 @@ if (slidesEl && heroPool.length > 0) {
 
   const layerA = document.createElement("img");
   const layerB = document.createElement("img");
-  layerA.className = "hero-slide active";
+  layerA.className = "hero-slide";
   layerB.className = "hero-slide";
-  layerA.src = sequence[index];
   slidesEl.appendChild(layerA);
   slidesEl.appendChild(layerB);
 
   let activeLayer = layerA;
   let hiddenLayer = layerB;
+
+  // Preload + decode the very first slide too, so it fades in cleanly
+  // instead of popping in, and clear the skeleton once it's ready.
+  (async () => {
+    const firstSrc = sequence[index];
+    const preload = new Image();
+    preload.src = firstSrc;
+    try {
+      await preload.decode();
+    } catch (err) {
+      // show it anyway if decoding fails
+    }
+    activeLayer.src = firstSrc;
+    activeLayer.classList.add("active");
+    if (heroEl) heroEl.classList.remove("skeleton");
+  })();
 
   async function advance() {
     index++;
