@@ -1,10 +1,17 @@
 // js/hero.js — homepage hero: cross-dissolves through every landscape project image
 // (not thumbnails, and not portrait-oriented photos), in a shuffled, non-repeating
 // order that reshuffles once the full set has played.
+//
+// Orientation is precomputed in data.js (the "landscape" flag on each image),
+// so building this list is instant and requires no extra downloads.
 
-const candidatePool = [];
+const heroPool = [];
 PROJECTS.forEach((project) => {
-  project.images.forEach((img) => candidatePool.push(img.src));
+  project.images.forEach((img) => {
+    if (img.landscape !== false) {
+      heroPool.push(img.src);
+    }
+  });
 });
 
 function shuffle(arr) {
@@ -16,23 +23,9 @@ function shuffle(arr) {
   return shuffled;
 }
 
-function checkOrientation(src) {
-  return new Promise((resolve) => {
-    const img = new Image();
-    img.onload = () => resolve(img.naturalWidth >= img.naturalHeight ? src : null);
-    img.onerror = () => resolve(null);
-    img.src = src;
-  });
-}
+const slidesEl = document.getElementById("hero-slides");
 
-async function initHero() {
-  const slidesEl = document.getElementById("hero-slides");
-  if (!slidesEl) return;
-
-  const checked = await Promise.all(candidatePool.map(checkOrientation));
-  const heroPool = checked.filter(Boolean);
-  if (heroPool.length === 0) return;
-
+if (slidesEl && heroPool.length > 0) {
   let sequence = shuffle(heroPool);
   let index = 0;
 
@@ -74,5 +67,3 @@ async function initHero() {
 
   setInterval(advance, 4000);
 }
-
-initHero();

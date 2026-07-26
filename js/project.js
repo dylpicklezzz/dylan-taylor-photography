@@ -27,12 +27,19 @@ if (!project) {
 
     // Portrait photos are restricted to the viewport height instead of
     // stretching full-width, so they don't appear stretched/oversized.
-    const imgEl = fig.querySelector("img");
-    imgEl.addEventListener("load", () => {
-      if (imgEl.naturalHeight > imgEl.naturalWidth) {
-        fig.classList.add("portrait");
-      }
-    });
+    // "landscape" is precomputed in data.js so this doesn't have to wait on
+    // the image loading; the thumbnail (no stored flag) falls back to
+    // checking once it loads.
+    if (img.landscape === false) {
+      fig.classList.add("portrait");
+    } else if (img.landscape === undefined) {
+      const imgEl = fig.querySelector("img");
+      imgEl.addEventListener("load", () => {
+        if (imgEl.naturalHeight > imgEl.naturalWidth) {
+          fig.classList.add("portrait");
+        }
+      });
+    }
 
     gallery.appendChild(fig);
   });
