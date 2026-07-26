@@ -264,7 +264,7 @@ const PROJECTS = [
     intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
     thumb: "images/darkmofo/thumb.jpg",
     thumbGrid: "images/darkmofo/thumb-grid.jpg",
-    thumbRatio: 1.4993,
+    thumbRatio: 1.4981,
     images: [
       { src: "images/darkmofo/01.jpg", caption: "Caption for photo 1", landscape: true },
       { src: "images/darkmofo/02.jpg", caption: "Caption for photo 2", landscape: true },
