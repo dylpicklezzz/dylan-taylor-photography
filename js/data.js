@@ -361,5 +361,44 @@ const PROJECTS = [
       { src: "images/foxriver/17.jpg", caption: "Caption for photo 17", landscape: true },
       { src: "images/foxriver/18.jpg", caption: "Caption for photo 18", landscape: true }
     ]
+  },
+  {
+    slug: "southisland",
+    title: "South Island",
+    intro: "Write a short paragraph of body copy here — set the scene for this project, where it was shot and what it's about.",
+    thumb: "images/southisland/thumb.jpg",
+    thumbGrid: "images/southisland/thumb-grid.jpg",
+    thumbRatio: 1.4914,
+    images: [
+      { src: "images/southisland/01.jpg", caption: "Caption for photo 1", landscape: true },
+      { src: "images/southisland/02.jpg", caption: "Caption for photo 2", landscape: true },
+      { src: "images/southisland/03.jpg", caption: "Caption for photo 3", landscape: true },
+      { src: "images/southisland/04.jpg", caption: "Caption for photo 4", landscape: true },
+      { src: "images/southisland/05.jpg", caption: "Caption for photo 5", landscape: true },
+      { src: "images/southisland/06.jpg", caption: "Caption for photo 6", landscape: true },
+      { src: "images/southisland/07.jpg", caption: "Caption for photo 7", landscape: true },
+      { src: "images/southisland/08.jpg", caption: "Caption for photo 8", landscape: true },
+      { src: "images/southisland/09.jpg", caption: "Caption for photo 9", landscape: true },
+      { src: "images/southisland/10.jpg", caption: "Caption for photo 10", landscape: true },
+      { src: "images/southisland/11.jpg", caption: "Caption for photo 11", landscape: true },
+      { src: "images/southisland/12.jpg", caption: "Caption for photo 12", landscape: true },
+      { src: "images/southisland/13.jpg", caption: "Caption for photo 13", landscape: true },
+      { src: "images/southisland/14.jpg", caption: "Caption for photo 14", landscape: true },
+      { src: "images/southisland/15.jpg", caption: "Caption for photo 15", landscape: true },
+      { src: "images/southisland/16.jpg", caption: "Caption for photo 16", landscape: true },
+      { src: "images/southisland/17.jpg", caption: "Caption for photo 17", landscape: true },
+      { src: "images/southisland/18.jpg", caption: "Caption for photo 18", landscape: true },
+      { src: "images/southisland/19.jpg", caption: "Caption for photo 19", landscape: true },
+      { src: "images/southisland/20.jpg", caption: "Caption for photo 20", landscape: true },
+      { src: "images/southisland/21.jpg", caption: "Caption for photo 21", landscape: true },
+      { src: "images/southisland/22.jpg", caption: "Caption for photo 22", landscape: true },
+      { src: "images/southisland/23.jpg", caption: "Caption for photo 23", landscape: true },
+      { src: "images/southisland/24.jpg", caption: "Caption for photo 24", landscape: true },
+      { src: "images/southisland/25.jpg", caption: "Caption for photo 25", landscape: true },
+      { src: "images/southisland/26.jpg", caption: "Caption for photo 26", landscape: true },
+      { src: "images/southisland/27.jpg", caption: "Caption for photo 27", landscape: true },
+      { src: "images/southisland/28.jpg", caption: "Caption for photo 28", landscape: true },
+      { src: "images/southisland/29.jpg", caption: "Caption for photo 29", landscape: true }
+    ]
   }
 ];

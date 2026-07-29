@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — Dylan Taylor</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+  <header class="admin-header">
+    <h1 class="admin-title">Site Admin</h1>
+    <div class="admin-actions">
+      <span id="admin-status" class="admin-status">No file loaded</span>
+      <button id="btn-load" class="admin-btn">Open data.js</button>
+      <button id="btn-save" class="admin-btn admin-btn-primary" disabled>Save changes</button>
+    </div>
+  </header>
+
+  <main id="admin-main" class="admin-main">
+    <p class="admin-empty">
+      This tool edits <code>js/data.js</code> directly on your computer — nothing is uploaded anywhere.
+      Click "Open data.js" and select the real file from this project folder
+      (<code>js/data.js</code>). Only works in Chrome or Edge.
+    </p>
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

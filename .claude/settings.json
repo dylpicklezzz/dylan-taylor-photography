@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/Applications/Google Chrome.app/Contents/MacOS/Google Chrome *)",
+      "Bash(curl -s*)",
+      "Bash(open http://localhost:8123*)",
+      "Bash(lsof -i :8123*)",
+      "Bash(gh api repos/dylpicklezzz/dylan-taylor-photography/pages*)"
+    ]
+  }
+}

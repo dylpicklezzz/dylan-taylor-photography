@@ -250,12 +250,13 @@ nav {
 }
 
 .full-image {
-  margin: 0 0 3rem 0;
+  margin: 0 2rem 3rem;
 }
 
 .full-image img {
   width: 100%;
   display: block;
+  border-radius: 8px;
 }
 
 .full-image.portrait img {
@@ -265,13 +266,14 @@ nav {
   max-height: 100vh;
   display: block;
   margin: 0 auto;
+  border-radius: 8px;
 }
 
 .full-image figcaption {
   color: var(--grey);
   font-size: 0.8rem;
   text-align: left;
-  margin: 0.5rem 2rem 0;
+  margin: 0.5rem 0 0;
 }
 
 .page-footer-links {
@@ -302,8 +304,8 @@ nav {
     margin: 0 1.25rem 2rem;
   }
 
-  .full-image figcaption {
-    margin: 0.5rem 1.25rem 0;
+  .full-image {
+    margin: 0 1.25rem 3rem;
   }
 
   .page-footer-links {
