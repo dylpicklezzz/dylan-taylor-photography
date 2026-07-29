@@ -257,6 +257,13 @@ nav {
   width: 100%;
   display: block;
   border-radius: 8px;
+  background: var(--grey-light);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.full-image img.loaded {
+  opacity: 1;
 }
 
 .full-image.portrait img {
